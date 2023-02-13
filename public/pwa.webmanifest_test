@@ -1,0 +1,22 @@
+{
+  "name": "Wytwórnia Kontentu",
+  "short_name": "Wytwórnia Kontentu",
+  "description": "Tworzę filmiki, zdjęcia i wizualizację 3D promujące Twoją firmę w internecie!",
+  "icons": [
+    {
+      "src": "/lens.svg",
+      "sizes": "150x150",
+      "type": "image/svg",
+      "purpose": "maskable"
+    },
+     {
+      "src": "/splash.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#212529",
+  "background_color": "#212529"
+}

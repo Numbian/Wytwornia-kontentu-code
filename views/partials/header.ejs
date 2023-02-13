@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- PWA STUFF TEST -->
+<link rel='manifest' href='manifest.json'>
+<meta name="theme-color" content="#ffffff"/>
+<title><%= title %></title>
+<meta name="description" content="<%= description %>">
+<link rel="icon" sizes="154x154" href="images/favicon.jpg">
+<link rel="canonical" href="<%= canonical %>">
+<link rel="apple-touch-icon" href="/apple.png">
+
+<meta property="og:type" content="company">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Wizualizacje i filmy od freelancera">
+<meta property="og:description" content="Treści wizualne do social mediów i www">
+<meta property="og:image" content="https://wytwornia-kontentu.pl/rendery/gabinet_fix.jpg">
+<meta property="og:email" content="pawel.walasiewicz@gmail.com">
+
+<link rel="preload" href="/style.min.css" as="style">  
+<!-- <link rel="preload" href="/style.css" as="style">   -->
+
+<link rel="stylesheet" type="text/css" href="/style.min.css"> 
+<!-- <link rel="stylesheet" type="text/css" href="/style.css">  -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186564695-1"></script>
+<script async>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-186564695-1');</script>
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger logoNav" href="/"><img src="images/logo_black.svg" alt="logo-wytwornia-kontentu" loading="lazy" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item py-2">
+            <a class="nav-link " href="/wizualizacje">Wizualizacje</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link" href="/filmy-reklamowe">Zdjęcia i filmy</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link " href="/wirtualny-spacer">Wirtualne spacery</a>
+          </li>
+          <li class="nav-item py-2">
+            <a class="nav-link " href="/aplikacje-webowe">Aplikacje</a>
+          </li>
+           <li class="nav-item py-2">
+            <a class="nav-link " href="/cennik">Cennik</a>
+          </li>
+          <li class="nav-item py-2">
+            <a id="nav1" class="nav-link " href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+      <a href="tel:+48606460059" class="pl-3  py-2" style="text-decoration: none; font-size: 18px;"><span><img class="d-none d-lg-inline-block" style="height:23px; margin-bottom:5px;" src="" alt=""><strong>606 460 059</strong></span></a>
+    </div>
+  </nav>
+
+ 
+<!-- ///FLASH MESSAGES -->
+<%if(error && error.length>0){%>
+<div class="alert alert-danger alert-dismissible fade show mx-auto px-3 py-2" style="position: fixed; top:60px; right:5px; z-index: 100;" role="alert">
+ <%=error%>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<%}%>
+
+<%if(success && success.length>0){%>
+<div class="alert alert-success alert-dismissible fade show mx-auto px-3 py-2" style="position: fixed; top:60px; right:5px; z-index: 100;" role="alert">
+<%=success%>
+ <span><button type="button" class="close btn-primary" data-dismiss="alert" aria-label="Close"> OK </button></span>
+</div>
+
+<%}%>
+
+

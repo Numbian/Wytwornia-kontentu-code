@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /leads
+Disallow: /login
+
+Sitemap: http://wytwornia-kontentu.pl/sitemap.xml

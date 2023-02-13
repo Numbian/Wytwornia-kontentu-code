@@ -1,0 +1,162 @@
+<%- include('partials/header'); -%>
+
+<style>
+	/* Container holding the image and the text */
+.fullScreenCarousel {
+  background-color: rgb(33, 37, 41);
+  position: relative;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+}
+
+.centeredOverlay {
+  z-index: 20; 
+  background-color: rgba(33, 37, 41,0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<div class="fullScreenCarousel">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- Indicators -->
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item" >
+      <img class="d-block w-100" src="rendery/2.jpg" loading="lazy" data-color="lightblue" alt="First Image">
+      <div class="carousel-caption d-md-block">
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img class="d-block w-100" src="rendery/salon_fix.jpg" loading="lazy" data-color="firebrick" alt="Second Image">
+      <div class="carousel-caption d-md-block">
+
+      </div>
+    </div>
+    <!--  
+    <div class="carousel-item">
+      <img class="d-block w-100" src="rendery/9.jpg" loading="lazy" data-color="violet" alt="Third Image">
+      <div class="carousel-caption d-md-block">
+      </div>
+    </div>
+     -->
+  </div>
+</div>
+<div class="centeredOverlay d-flex h-100 text-center align-items-center w-100">
+      <div class="w-100 text-white">
+     <p class="px-2 pb-1 mx-auto" style="font-weight:800; font-size:calc(25px + 2.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:10px;">Realistyczne wizualizacje 3D</p>
+     <p class="px-2 pb-1 mx-auto" style="max-width:1000px; font-weight:600; font-size:calc(18px + 1.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:calc(15px + 0.5vw)!important;">Reklamuj swoją inwestycję jeszcze przed rozpoczeciem budowy!</p>
+     <span>
+         <a  style="font-size: 20px; " href="#rendery" class="btn btn-lg btn-primary m-3 p-2 pulse">Poznaj szczegóły</a>
+    </span>
+      </div>
+     </div>
+</div>
+
+
+
+
+
+<section id="rendery" style="background-color:grey; background-image: linear-gradient(rgba(247,247,247,0.94) 9%, rgba(236,236,236,0.94)), url(images/zdjecia/dom.jpg); background-size: cover; background-attachment: fixed;">
+  <div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Wizualizacje 3D</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">
+         <a href="rendery/11.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/11_thumb.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+            </a>
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Wizualizacje 3D to idealne narzędzie do zaprezentowania klientom planowanych nieruchomościm jeszcze przed ich wybudowaniem. Architekci w ramach swojej pracy przeważnie przygotowują projekty oprogramowaniu technicznym (np. AutoCad), skupiając się na szczegółowych planach budowlanych. Zlecenie przygotowania wizualizacji 3D doświadczonemu grafikowi zdecydowanie ułatwia promowanie i komunikowwanie nowej inwestycji.</p>
+        </div>
+      </div> 
+ </div>
+  </div>
+</section>
+
+<section>
+	<div class="container">  
+      <div class="row">
+        <!-- <div class="col-12 mt-3 mb-4 text-center">
+      	<h2>Wizualizacje 3D</h2>
+      </div> -->
+        <div class="col-lg-6 m-auto m-1 p-0">
+           <a href="images/zdjecia/dom2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0 ">
+                <img src="images/zdjecia/dom2_thumb.jpg" class="img-fluid thumbnail p-1" alt="Render bliźniaka" loading="lazy">
+            </a>
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2">
+        <div class="py-auto leadUl my-2">
+            <p>Oferowane usługi:</p>
+          <ul>
+            <li>wykonanie modelu w oparciu o plany architektoniczne,</li>
+            <li>przygotowanie tekstur i materiałów PBR,</li>
+            <li>stworzenie wirtualnej okolicy (drogi, chodniki, drzewa),</li>
+            <li>integracja modelu 3D z prawdziwymi zdjęciami okolicy,</li>
+            <li>oświetlenie sceny teksturą HDRI oraz renderowanie.</li>
+          </ul>
+        
+           <a href="#kontakt"><button type="button" class="btn btn-primary btn-rounded pb-1">Zamów wycenę</button></a>
+        </div>
+      </div> 
+ 
+             <a href="rendery/salon_fix.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/salon_fix.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 12" loading="lazy">
+            </a>
+           
+               <a href="rendery/9.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0 ">
+                <img src="rendery/9_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 2" loading="lazy">
+            </a>
+            <a href="rendery/2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/2_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 3" loading="lazy">
+            </a>
+             <a href="rendery/6.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/6_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 4" loading="lazy">
+            </a>
+            <a href="rendery/3.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/3_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 5" loading="lazy">
+            </a>
+              <a href="rendery/4.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/4_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 6" loading="lazy">
+            </a>
+            <a href="rendery/14.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/14_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 7" loading="lazy">
+            </a>
+            <a href="rendery/kuchnia_fix.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/kuchnia_fix.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 8" loading="lazy">
+            </a>
+            <a href="rendery/5.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/5_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 9" loading="lazy">
+            </a>
+              <a href="rendery/1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/1_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 10" loading="lazy">
+            </a>
+            <a href="rendery/gabinet_fix.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0">
+                <img src="rendery/gabinet_fix.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 11" loading="lazy">
+            </a>
+             <a href="rendery/10.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-lg-4 col-md-6 col-12 p-0 m-0 ">
+                <img src="rendery/10_thumb.jpg" class="img-fluid thumbnail p-1" alt="Zdjęcie 1" loading="lazy">
+            </a>
+             
+ 
+ </div>
+  </div>
+</section>
+
+  
+
+
+
+     
+
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,95 @@
+<%- include('partials/header'); -%>
+
+<div class="fullScreenCarousel">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox"  aria-label="Header">
+      <div class="carousel-item active" style="background-image: url('rendery/gabinet_fix.jpg')">
+      </div>
+      <div class="carousel-item" style="background-image: url('rendery/kuchnia_fix.jpg')">
+      </div> 
+    </div>
+  </div>
+
+<div class="centeredOverlay d-flex h-100 text-center align-items-center w-100">
+      <div class="w-100 text-white">
+     <h1 class="px-2 pb-1 mx-auto" style="font-weight:800; font-size:calc(25px + 2.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:10px;">Wirtualne spacery</h1>
+     <p class="px-2 pb-1 mx-auto" style="max-width:1000px; font-weight:600; font-size:calc(18px + 1.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:calc(15px + 0.5vw)!important;">ze zdjęć 360 lub po scenie 3D</p>
+     <span>
+         <a  style="font-size: 20px; " href="#more" class="btn btn-lg btn-primary m-3 p-2 pulse">Poznaj szczegóły</a>
+    </span>
+      </div>
+     </div>
+</div>
+
+<section id="more"  class="fancyBgWhite">
+  <div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Wirtualne spacery</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">
+        
+                <img src="rendery/11_thumb.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Wirtualny spacer to skuteczne narzędzie do zaprezentowania wnętrza lokalu bez konieczności wychodzenia z domu. Oferuję 2 typy spacerów wykorzystujących:</p>
+           <ul class="leadUl" style="padding-left: 40px;">
+              <li>zdjęcia 360 wykonane w wybudowanym lokalu,</li>
+              <li>wizualizacje na scenie 3D w przypadku planowanych inwestycji,</li>
+            </ul>
+           <p class="leadUl">Zdjęcia są łączone za pomocą biblioteki Pannellum.js i przekazywane w formie skryptu gotowego do wklejenia na stronę lub bezpośrednio publikowane na Google Street View i łączone z wizytówką firmy.</p>
+        </div>
+      </div> 
+ </div>
+  </div>
+</section>
+
+<section class="fancyBg" >
+  <div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Spacer po scenie 3D</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0" onclick="if(navigator.onLine){window.open('scena3d-2', '_blank');}">
+            <img src="images/wirtualny-spacer-3d.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Zastanawiasz się jak skutecznie wypromować Twoją nową inwestycję, która jest dopiero na wczesnym etapie realizacji? Nic prostrzego! Stworzę dla Ciebie wirtualny model wnętrza lokalu na podstawie planów architektonicznych, a następnie umebluję go wirtualnymi meblami i akcesoriami. Takie rozwiązanie pozwoli pokazać potencjalnym klientom rozkład pomieszczeń znacznie bardziej efektywnie, niż na standardowych wizualizacjach 2D.</p>
+          <a href="scena3d-2"><div class="btn btn-lg btn-primary m-3 p-2 pulse">Zobacz przykład 1</div></a>
+          <a href="scena3d"><div class="btn btn-lg btn-primary m-3 p-2 pulse">Zobacz przykład 2</div></a>
+        </div>
+      </div> 
+ </div>
+  </div>
+</section>
+
+
+<section  class="fancyBgWhite" onclick="if(navigator.onLine){window.open('zdjecia360', '_blank');}">
+  <div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Spacer ze zdjęciami 360</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">
+          <img src="images/wirtualny-spacer.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Chcesz ułatwić klientom zapoznanie się z gotowym do odbioru lokalem bez konieczności wychodzenia z domu? W takiej sytuacji najlepiej sprawdzi się spacer z prawdziwymi zdjęciami. W zależności od wymaganej rozdzielczości, zdjęcia sferyczne wykonuję aparatem DSLR lub kamerą GoPro MAX. Zdjęcia mogą być również wykorzystane jako spacer w wizytówce Google Maps.</p>
+          <div class="btn btn-lg btn-primary m-3 p-2 pulse">Zobacz przykład</div>
+        </div>
+      </div> 
+ </div>
+  </div>
+
+</section>
+
+
+
+    
+
+
+<%- include('partials/footer'); -%>

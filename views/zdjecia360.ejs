@@ -1,0 +1,786 @@
+<%- include('partials/header'); -%>
+
+
+<head>
+    <meta name="robots" content="noindex" />
+</head>
+
+<script src="js/pannelum.js"></script>
+<link rel="stylesheet" href="css/pannelum.css">
+<style>
+
+   #panorama {
+    height: 80vh;
+    }
+    .hideOverlay{
+       display:none;
+    }
+    .custom-hotspot {
+        height: 110px;
+        width: 110px;
+        background-image: url(images/arrow3d.svg);
+        background-repeat: no-repeat;
+        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+         box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+         animation: shadowPulsing 2s infinite;
+    }
+     
+    .custom-hotspot:hover {
+        filter: hue-rotate(10deg);
+    }
+
+
+.mainMargin{
+    margin-top: 58px;
+}
+@media (min-width: 991px){
+.mainMargin {
+    margin-top: 72px;
+}}
+
+@-webkit-keyframes shadowPulsing {
+ 0% {
+    filter: drop-shadow( 5px 5px 2px rgba(0, 0, 0, .9));
+  }
+  70% {
+      filter: drop-shadow( 15px 15px 8px rgba(0, 0, 0, .7));
+  }
+  100% {
+      filter: drop-shadow( 5px 5px 2px rgba(0, 0, 0, .9));
+  }
+}
+@keyframes shadowPulsing {
+   0% {
+    filter: drop-shadow( 5px 5px 2px rgba(0, 0, 0, .9));
+  }
+  70% {
+      filter: drop-shadow( 15px 15px 8px rgba(0, 0, 0, .7));
+  }
+  100% {
+      filter: drop-shadow( 5px 5px 2px rgba(0, 0, 0, .9));
+  }
+}
+
+@media only screen and (max-width: 800px) {
+    #panorama {   
+    height: 70vh;
+}
+    
+    .custom-hotspot {
+        height: 50px;
+        width: 50px;
+    }  
+  }  
+
+</style>
+
+<div class="mainMargin">
+<div id="panorama" style="position: relative; width:100%;" class="pnlm-container">
+<div id="panoramOverlay" class="hideOverlay" style="z-index:20;width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color:rgb(200,200,200,0.5);">
+    <p class="px-3" style="position: relative; top: 40%;font-size:calc(18px + 1.2vw); margin-auto; text-align:center;">Użyj 2 palców aby obrócić kamerę.</p>
+    </div>
+</div>
+
+<div class="container py-2 px-2">
+<div class="row m-auto text-center">
+    <div class="col-12 p-3">
+        <a href="#kontakt"><button type="button" class="btn btn-primary btn-lg btn-block" style="max-width:600px; m-auto; display:inline;">Zamów wycenę</button></a>
+    </div>
+</div>
+</div>
+</div>
+        
+
+<script>
+
+if(window.innerWidth<800){
+    fow=90;
+}else{
+    fow=260;
+}
+
+
+viewer = pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "2",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "mouseZoom": false,
+        "compass": true,
+        "autoRotate": -2,
+        "autoRotateInactivityDelay":2500, 
+        //"orientationOnByDefault": true,
+        "friction": 0.2,
+        //"minPitch":-61,
+        //"maxPitch":90
+        
+       
+    },
+    
+    "scenes": {
+        "0": {
+            "title": "Ulica",
+            "hfov": fow,
+            "pitch": 5,
+            "yaw": -30,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/0.jpg",
+            "northOffset": 185,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": -27,
+                    "type": "scene",
+                    "text": "Drzwi wejściowe",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+           "1": {
+            "title": "Drzwi wejściowe",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 130,
+            "northOffset": 130,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/1.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 125,
+                    "type": "scene",
+                    "text": "Hol",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "Ulica",
+                    "sceneId": "0",
+                    "cssClass": "custom-hotspot",
+                },
+                 {
+                    "pitch": -30,
+                    "yaw": -10,
+                    "type": "scene",
+                    "text": "Róg działki",
+                    "sceneId": "11",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "2": {
+            "title": "Hol",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 10,
+            "northOffset": 150,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/2.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Korytarz",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 43,
+                    "type": "scene",
+                    "text": "Schody",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                },
+                 {
+                    "pitch": -30,
+                    "yaw": 105,
+                    "type": "scene",
+                    "text": "Garaż",
+                    "sceneId": "3",
+                    "cssClass": "custom-hotspot",
+                },
+                 {
+                    "pitch": -30,
+                    "yaw": -70,
+                    "type": "scene",
+                    "text": "Drzwi wejściowe",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "3": {
+            "title": "Garaż",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 180,
+            "northOffset": -120,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/3.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "Hol",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+         "4": {
+            "title": "Schody",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "northOffset": 150,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/4.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -80,
+                    "type": "scene",
+                    "text": "Hol",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -25,
+                    "type": "scene",
+                    "text": "Korytarz",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": "Klatka schodowa",
+                    "sceneId": "15",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+         "5": {
+            "title": "Korytarz",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "northOffset": -160,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/5.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 160,
+                    "type": "scene",
+                    "text": "Hol",
+                    "sceneId": "2",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 120,
+                    "type": "scene",
+                    "text": "Schody",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -120,
+                    "type": "scene",
+                    "text": "Gabinet",
+                    "sceneId": "6",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "7",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+         "6": {
+            "title": "Gabinet",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "northOffset": -70,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/6.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -10,
+                    "type": "scene",
+                    "text": "Korytarz",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "7": {
+            "title": "Korytarz 2",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": -120,
+            "northOffset": -130,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/7.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 125,
+                    "type": "scene",
+                    "text": "Korytarz",
+                    "sceneId": "5",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": "Schowek",
+                    "sceneId": "12",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -140,
+                    "type": "scene",
+                    "text": "Aneks kuchenny",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -40,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "9",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+        "8": {
+            "title": "Aneks kuchenny",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 170,
+            "northOffset": 30,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/8.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "9",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -105,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "7",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+          "9": {
+            "title": "Salon",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 0,
+            "northOffset": 180,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/9.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -145,
+                    "type": "scene",
+                    "text": "Aneks kuchenny",
+                    "sceneId": "8",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Ogród",
+                    "sceneId": "10",
+                    "cssClass": "custom-hotspot",
+                },
+                 {
+                    "pitch": -30,
+                    "yaw": 165,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "7",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+        "10": {
+            "title": "Ogród",
+            "hfov": fow,
+            "pitch": 10,
+            "yaw": 0,
+            "northOffset": 0,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/10.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 130,
+                    "type": "scene",
+                    "text": "Róg działki",
+                    "sceneId": "11",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Salon",
+                    "sceneId": "9",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                ,
+                {
+                    "pitch": -20,
+                    "yaw": -20,
+                    "type": "scene",
+                    "text": "Pomieszczenie techniczne",
+                    "sceneId": "14",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+        "11": {
+            "title": "Ogród",
+            "hfov": fow,
+            "pitch": 0,
+            "yaw": 0,
+            "northOffset": -25,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/11.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": "Drzwi wejściowe",
+                    "sceneId": "1",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -20,
+                    "yaw": -30,
+                    "type": "scene",
+                    "text": "Ogród",
+                    "sceneId": "10",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "12": {
+            "title": "Schowek",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": -90,
+            "northOffset": -15,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/12.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 110,
+                    "type": "scene",
+                    "text": "Korytarz 2",
+                    "sceneId": "7",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -90,
+                    "type": "scene",
+                    "text": "Łazienka",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+        "13": {
+            "title": "Łazienka",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": -40,
+            "northOffset": 140,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/13.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -35,
+                    "type": "scene",
+                    "text": "Schowek",
+                    "sceneId": "12",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 160,
+                    "type": "scene",
+                    "text": "Pomieszczenie techniczne",
+                    "sceneId": "14",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                }
+                 ]
+        },
+        "14": {
+            "title": "Pomieszczenie techniczne",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 160,
+            
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/14.jpg",
+            "northOffset": 20,
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 155,
+                    "type": "scene",
+                    "text": "Ogród",
+                    "sceneId": "10",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Łazienka",
+                    "sceneId": "13",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "15": {
+            "title": "Klatka schodowa",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 10,
+            "northOffset": -210,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/15.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "16",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -50,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "Schody",
+                    "sceneId": "4",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "16": {
+            "title": "Korytarz na piętrze",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": -20,
+            "northOffset": 80,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/16.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -40,
+                    "yaw": -85,
+                    "type": "scene",
+                    "text": "Klatka schodowa",
+                    "sceneId": "15",
+                    "cssClass": "custom-hotspot",
+                    "targetYaw": "sameAzimuth",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 55,
+                    "type": "scene",
+                    "text": "Pokój",
+                    "sceneId": "20",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Pokój",
+                    "sceneId": "17",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -25,
+                    "type": "scene",
+                    "text": "Łazienka",
+                    "sceneId": "18",
+                    "cssClass": "custom-hotspot",
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -55,
+                    "type": "scene",
+                    "text": "Pokój",
+                    "sceneId": "19",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "17": {
+            "title": "Pokój",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": -40,
+            "northOffset": -140,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/17.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 100,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "16",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "18": {
+            "title": "Łazienka",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": -60,
+            "northOffset": 150,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/18.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 125,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "16",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "19": {
+            "title": "Pokój",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 140,
+            "northOffset": 45,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/19.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 10,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "16",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        },
+        "20": {
+            "title": "Pokój",
+            "hfov": fow,
+            "pitch": -15,
+            "yaw": 150,
+            "northOffset": 20,
+            "type": "equirectangular",
+            "panorama": "spacer/zdjecia360/20.jpg",
+    
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": -5,
+                    "type": "scene",
+                    "text": "Korytarz na piętrze",
+                    "sceneId": "16",
+                    "cssClass": "custom-hotspot",
+                }
+                 ]
+        }
+        
+    }
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+<%- include('partials/footer'); -%>

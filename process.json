@@ -1,0 +1,9 @@
+{
+  "name" : "Wytwórnia Kontentu",
+  "script" : "app.js",
+  "exec_mode" : "cluster",
+  "instances" : "3",
+  "env_production" : {
+    "NODE_ENV": "production"
+  }
+}

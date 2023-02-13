@@ -1,0 +1,50 @@
+﻿<%- include('partials/header'); -%>
+
+<section style="width:100%; padding-top:150px;">
+
+<table class="mx-auto" style="max-width:100% ">
+	<thead>
+	    <tr>
+	    	<th>NO</th>
+	        <th>Name</th>
+	        <th>Phone</th>
+	        <th>Email</th>
+	         <th>Message</th>
+		    <th>GclID</th>
+		   <th>Google ID</th>
+		   <th>leadIp</th>
+	    	<th>Date</th>
+           <th>Delete</th>
+	      </tr>
+	</thead>
+
+<% allLeads.forEach((item,index) => { %>
+
+ <tr>
+        <form action="/" method="POST">
+	        <td><%=index+1%></td>
+	        <td><%=item.name%></td>
+	        <td><%=item.phone%></td>
+	        <td><%=item.email%></td>
+            <td><%=item.message%></td>
+	        <td style="max-width:200px; word-wrap: break-word"><%=item.googleID%></td>
+		    <td style="max-width:200px; word-wrap: break-word"><%=item.gclID%></td>
+		    <td style="max-width:200px; word-wrap: break-word"><%=item.leadIp%></td>
+		    <td style="max-width:200px; word-wrap: break-word"><%=item.date%></td>
+ 		</form>
+            <td><form action="/delete/<%=item._id%>" method="POST"><button>delete</button></form></td>	
+ </tr>
+
+
+<% }) %>
+<table>
+</table>
+<form action="/delete/all" method="POST"><button>delete ALL</button></form>
+</table>
+
+</section>
+
+
+
+
+<%- include('partials/footer'); -%>

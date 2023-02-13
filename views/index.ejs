@@ -1,0 +1,119 @@
+<%- include('partials/header'); -%>
+
+<div class="head">
+  <video class="mobile-no-load" muted="muted" loop="loop">
+     <source src="video/hero3.mp4" type="video/mp4">   
+  </video>
+<script defer>if (window.innerWidth > 730) {document.querySelector('.mobile-no-load').setAttribute('autoplay', 'autoplay');}</script>
+ <div class="container h-100 text-overlay-header">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+     <h1 class="px-2 pb-1 mx-auto" style="font-weight:800; font-size:calc(21px + 2vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:10px;">Kontent do social mediów</p>
+     <p class="px-2 pb-1 mx-auto" style="font-weight:600; font-size:calc(14px + 1.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:calc(15px + 0.5vw)!important;">Wizualizacje, filmy i zdjęcia od freelancera!</h1>
+       <span>
+           <a  style="font-weight:800; font-size: 19px; " href="#rendery" class="btn btn-lg btn-primary m-3 p-2 pulse">Sprawdź ofertę!</a>  
+      </span>
+    </div></div></div>
+  <div class="overlay"></div>
+</div>
+
+<section>
+  <div class="container">
+  <div class="row text-center mt-5 mb-3">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="images/price.svg" alt="Niskie ceny" width="100" height="100" loading="lazy">
+            <h2 class="pt-3">Niskie ceny</h2>
+             <p class="px-3">Zlecenia realizowane w ramach Wytwórni Kontentu traktuję jedynie jako dodatkowe źródło dochodu. Pozwala mi to oferować bardzo konkurencyjne ceny.</p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="images/effort.svg" alt="Pełne zaangażowanie" width="100" height="100" loading="lazy">
+            <h2 class="pt-3">Zaangażowanie</h2>
+            <p class="px-3">Jeżeli decyduję się na przyjęcie projektu, to poświęcam mu całą swoją energię i zajmuję się całym procesem produkcyjnym.</p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="images/quality.svg" alt="Dobra jakość" width="100" height="100" loading="lazy">
+            <h2 class="pt-3">Dobra jakość</h2>
+            <p class="px-3">Korzystam z drona marki DJI oraz profesjonalnego oprogramowania Blender 3D. Dokładną specyfikację dopasowuje do każdego zlecenia indywidualnie.</p>
+          </div></div></div>
+</section>
+
+<section id="rendery" class="fancyBg"  onclick="location.href='wizualizacje'">
+	<div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+      	<h2>Wizualizacje 3D</h2>
+      </div>
+        <div class="col-lg-6 m-auto px-2 m-0">
+          <img data-src="rendery/A_thumb.jpg" alt="Wizualizacja 3D domu jednorodzinnego" class="imageResponsiveCover roundedCorners" src="rendery/A_thumb.jpg" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadP">Od ponad 5 lat zajmuję się tworzeniem wizualizacji 3D w programie Blender. Realizuję cały proces produkcyjny od modelowania, przez teksturowanie, tworzenie materiałów, aż po gotowy obrazek. W zależności od potrzeb mogę wymodelować całkowicie wirtualną scenę lub połączyć modele 3D z prawdziwym zdjęciem otoczenia. </p>
+           <a href="wizualizacje"><button type="button" class="btn btn-primary btn-lg btn-rounded">Przykładowe realizacje</button></a>
+        </div></div></div></div>
+</section>
+
+<section id="drony" class="fancyBgWhite" onclick="location.href='filmy-reklamowe'">
+  <div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Filmy i zdjęcia reklamowe</h2>
+      </div>
+       <div class="col-lg-6 m-auto px-2 m-0">
+          <img data-src="images/zdjecia/dron/9_thumb.jpg" alt="Bliźniak jednorodzinny" class="imageResponsiveCover roundedCorners" src="images/zdjecia/dron/9_thumb.jpg" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadP">Mam wieloletnie doświadczenie w nagrywaniu, montażu i edycji filmów reklamowych przeznaczonych do internetu. Realizowałem krótkie ujęcia do headerów, prezentacje nieruchomości na facebooka, tutoriale wideo oraz dłuższe nagrania z lektorem na youtube. Mam własny sprzęt do filmowania oraz robienia zdjęć.</p>   
+         <a href="filmy-reklamowe"><button type="button" class="btn btn-primary btn-lg btn-rounded">Zobacz przykładowe filmy</button></a>
+        </div></div></div></div>
+</section>
+     
+<section id="Wirtualne spacery" class="fancyBg" onclick="location.href='wirtualny-spacer'">
+	<div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+      	<h2>Wirtualne spacery</h2>
+      </div>
+         <div class="col-lg-6 m-auto px-2 m-0">
+          <img data-src="rendery/gabinet_thumb.jpg" alt="Wizualizacja pokoju" class="imageResponsiveCover roundedCorners" src="rendery/gabinet_thumb.jpg" loading="lazy">
+        </div>
+        <div class="col-lg-6 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadP">Wirtualny spacer umożliwia pokazanie Twojej firmy lub sprzedawanej nieruchomości bez konieczności wychodzenia z domu. Wykorzystuję bibliotekę Pannellum.js i dostarczam gotowy skrypt do wklejenia na stronę. Oferuję spacery po istniejących obiektach (zdjęcia 360) lub po całkowicie wirtualnych scenach (rendery equirectangular).</p>
+          <a href="wirtualny-spacer"><button type="button" class="btn btn-primary btn-lg btn-rounded">Przykładowe spacery</button></a>
+        </div></div></div></div>
+</section>
+
+<section id="www" class="fancyBgWhite" onclick="location.href='aplikacje-webowe'">
+	<div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+      	<h2>Responsywne strony www</h2>
+      </div>
+         <div class="col-lg-6 m-auto px-2 m-0">
+          <img data-src="images/dev2.jpg" alt="Szybka i tania strona" class="imageResponsiveCover roundedCorners" src="images/dev2.jpg" loading="lazy">
+        </div>
+        <div class="col-lg-6 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadP">Potrzebujesz szybką, responsywną aplikację webową lub landing page bez rozbudowanego CMS? Dobrze trafiłeś! Moje strony są w całości napisane w HTML5/CSS3 i Node.js. Strona na której teraz jesteś, z wideo w headerze i zdjęciami, osiąga prawie maksymalny wynik w mobilnym audycie Google Lighthouse. W ramach projektu mogę zaimplementować i skonfigurować Analytics oraz uruchomić PWA. </p>
+          <a href="aplikacje-webowe"><button type="button" class="btn btn-primary btn-lg btn-rounded">Sprawdź szczegóły</button></a>
+        </div></div></div></div>
+</section>
+
+<section id="omnie" class="fancyBg">
+	<div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+      	<h2>Dlaczego warto?</h2>
+      </div>
+         <div class="col-lg-6 m-auto px-2 m-0">
+          <img data-src="images/zdjecia/6_thumb.jpg" alt="Wizualizacja architektoniczna" class="imageResponsiveCover roundedCorners" src="images/zdjecia/6_thumb.jpg" loading="lazy">
+        </div>
+        <div class="col-lg-6 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadP">Content Marketing jest jednym z najbardziej wiarygodnych i angażujących narzędzi reklamowych. Produkcja treści wizualnych we współpracy z agencją marketingową wymaga jednak dużego budżetu, często niedostępnego dla małych firm oraz start-upów. Oferowane przeze mnie usługi wykonuję w pełni samodzielnie, dzięki czemu mogę oferować bardzo konkurencyjne ceny.</p>
+        </div></div></div></div>
+</section>
+
+<%- include('partials/footer'); -%>

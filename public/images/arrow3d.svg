@@ -1,0 +1,25 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66.83 42.96">
+  <defs>
+    <clipPath id="clip-path" transform="translate(0 -11.93)">
+      <rect y="11.93" width="66.83" height="42.96" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(0 -11.93)">
+      <rect x="5.75" y="20.99" width="55.62" height="22.47" style="fill: none"/>
+    </clipPath>
+  </defs>
+  <title>arrow_3d_3</title>
+  <g style="opacity: 0.800000011920929">
+    <g style="opacity: 0.5">
+      <g style="isolation: isolate">
+        <g style="clip-path: url(#clip-path)">
+          <path d="M33.42,11.93C15,11.93,0,21.55,0,33.41S15,54.89,33.42,54.89s33.42-9.61,33.42-21.48-15-21.48-33.42-21.48" transform="translate(0 -11.93)" style="fill: #a4c839"/>
+        </g>
+      </g>
+    </g>
+    <g style="isolation: isolate">
+      <g style="clip-path: url(#clip-path-2)">
+        <polyline points="33.42 9.06 5.75 28.15 10.97 31.52 33.42 16.92 56.13 31.53 61.37 28.15 33.42 9.06" style="fill: #f4f4f4"/>
+      </g>
+    </g>
+  </g>
+</svg>

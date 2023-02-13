@@ -1,0 +1,65 @@
+<!-- <section id="kontakt" class="fancyBg" style="background-image: linear-gradient(rgba(33, 37, 41,0.94) 9%, rgba(43, 47, 51,0.94)), url(images/zdjecia/dom_bg.jpg);"> -->
+
+<section id="kontakt" style="background-color:grey; background-image: radial-gradient(rgb(25, 30, 30) 9%, rgb(43, 47, 51));">
+	<div class="container colorWhite" >  
+      <div class="row pb-4">
+        <div class="col-12 mt-3 mb-4 text-center">
+      	<h2>Kontakt</h2>
+      </div>
+
+
+
+
+
+      <div class="col-12 m-auto py-2 text-left">
+        <div class="p-auto ">
+          <p style="max-width:900px;" class="lead text-center mx-auto" >Zostaw swoje dane i krótki opis projektu w formularzu - skontaktuję się w celu ustalenia szczegółów i przedstawienia wyceny.</p>
+        </div>
+         <form method="post" action="/leads" class="mx-auto" style="max-width:1000px;">
+           <div class="form-group row">
+                <div class=col-md-6>
+                        <label for="nameFieldBottom" class="pt-2">Imię i nazwisko:</label>
+                        <input id="nameFieldBottom" type="text" class="form-control" name="name" placeholder="" value="" maxlength="40">
+                        <label for="phoneFieldBottom" class="pt-2">Numer telefonu:</label>
+                        <input id="phoneFieldBottom" type="text" class="form-control" name="phone" placeholder="" value="" maxlength="40">
+                        <label for="emailFieldBottom" class="pt-2">Adres e-mail:</label>
+                        <input id="emailFieldBottom" type="text" class="form-control" name="email" placeholder="" value="" maxlength="40" required="required">
+                </div>
+                <div class=col-md-6>
+                       <label for="Field" class="pt-2">Wiadomość:</label>
+                       <textarea class="form-control rounded-0" id="Field" rows="4" name="message" maxlength="500"></textarea>
+                       <input onclick="checkOnline()" type="submit" class="btn btn-primary btn-lg btn-block w-100 mt-4" name="submit" value="Wyślij wiadomość">
+                 </div>      
+                <input id="gclidField" type="text" class="form-control" name="gclID" value="" hidden="">
+                <input id="googleIdField" type="text" class="form-control"name="googleID" value="" hidden="">
+            </div>
+             <p class="pt-5 pb-4 text-center">Wypełniając powyższy formularz zgadzam się na przetwarzanie moich danych osobowych w celu kontaktu i przekazania szczegółów oferty. Zapoznałem się z <a class="colorWhite" href="/polityka-prywatnosci">polityką prywatności</a> w zakresie przetwarzania moich danych osobowych.</p>
+           </form>
+        </div>
+
+      </div>
+
+
+
+
+
+<div class="footer bg-dark"><strong>Wytwórnia kontentu 2020</strong></div>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+  </body>
+
+
+<script src="/scripts.min.js" defer></script>
+
+</html>

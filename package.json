@@ -1,0 +1,27 @@
+{
+  "name": "wytwornia-kontentu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.11",
+    "nodemailer": "^6.4.18",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production && pm2 start app.js --watch",
+    "dev": "NODE_ENV=development && pm2 start app.js --watch",
+    "pwa": "create-pwa --icon='./public/iconPWA.png' --launch='./public/splashPWA.png'"
+  },
+  "author": "Paweł Wałasiewicz",
+  "license": "ISC"
+}

@@ -1,0 +1,115 @@
+<%- include('partials/header'); -%>
+
+<div class="fullScreenCarousel">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox" aria-label="Header">
+      <div class="carousel-item active" style="background-image: url('images/headerApp.jpg')">
+      </div>
+      <div class="carousel-item" style="background-image: url('images/headerApp2.jpg')">
+      </div> 
+    </div>
+  </div>
+
+<div class="centeredOverlay d-flex h-100 text-center align-items-center w-100" style="background-color: rgba(33, 37, 41,0.8);">
+      <div class="w-100 text-white">
+     <h1 class="px-2 pb-1 mx-auto" style="font-weight:800; font-size:calc(25px + 2.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:10px;">Tworzenie stron i aplikacji PWA</h1>
+     <p class="px-2 pb-1 mx-auto" style="max-width:1000px; font-weight:600; font-size:calc(18px + 1.5vw)!important; text-shadow: 5px 4px 4px rgba(0,0,0,1); margin-bottom:calc(15px + 0.5vw)!important;">Responsywne HTML5/CSS3 z back-end na Node.js</p>
+     <span>
+         <a  style="font-size: 20px; " href="#more" class="btn btn-lg btn-primary m-3 p-2 pulse">Poznaj szczegóły</a>
+    </span>
+      </div>
+     </div>
+</div>
+
+<section id="more" class="fancyBgWhite">
+  <div class="container">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Kiedy warto rozważyć stronę bez CMS?</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">
+                <img src="images/dev.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Strona internetowa bez CMS świetnie sprawdzi się, gdy posiadasz w zespole osobę znającą HTML, która będzie tworzyła nowe podstrony i edytowała istniejące treści bezpośrednio w kodzie serwera. W porównaniu do popularnych CMS (np. Wordpress), takie rozwiązanie oferuje znacznie szybszy czas ładowania, pełną dowolność wprowadzania zmian w wyglądzie poprzez HTML5/CSS3 oraz nieograniczone możliwości dodawania nowych funkcjonalności w przyszłości. Cały serwer Node.js działa w natywnym javascript, więc masz pełną kontrolę nad każdym aspektem jego działania.
+          </p>
+        </div>
+      </div> 
+ </div>
+  </div>
+</section>
+
+
+<section class="fancyBg" >
+  <div class="container" >  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Czym jest PWA?</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">
+                <img src="images/dev2.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Progresywne aplikacje to technologia umożliwiającą budowanie dynamicznych aplikacji webowych, które mogą zostać zainstalowane i działać podobnie do aplikacji natywnych Android i iOS. Ich największą zaletą jest zaawansowane cachowanie po stronie użytkownika, które pozwala na natychmiastowe wyświetlanie najważniejszych treści, niezależnie od stanu sieci (również offline). Service Worker działa jak serwer proxy po stronie klienta i daje całkowitą kontrolę nad pamięcią podręczną. Chcesz zobaczyć jak to działa? Wyłącz internet i ponownie wejdź na tą stronę.
+          </p>
+        </div>
+      </div> 
+ </div>
+  </div>
+</section>
+
+
+
+
+
+<section  class="fancyBgWhite">
+  <div class="container"  class="fancyBgWhite">  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Optymalizacja kodu do SEO</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">    
+            <img src="images/data.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">   
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">Czas ładowania na urządzeniach mobilnych jest jednym z głównych czynników decydujących o sukcesie nowej strony. Korzystając z back-endu na Node.js, uzyskujesz pełną kontrolę nie tylko nad kodem i wyglądem strony ale również nad kodem serwera. Ustawienie takich opcji jak kompresja gzip, headery, cache, SSL, czy implementacja Google Analytics jest bardzo prosta i nie wymaga żadnych "pluginów" spowalniających działanie aplikacji - wszystko działa na natywnym javascript.</p>
+        </div>
+      </div> 
+ </div>
+  </div>
+</div>
+</section>
+
+<section class="fancyBg">
+  <div class="container" >  
+      <div class="row">
+        <div class="col-12 mt-3 mb-4 text-center">
+        <h2>Co mogę dla Ciebie zrobić?</h2>
+      </div>
+        <div class="col-lg-6 m-auto m-1 p-0">    
+            <img src="images/code.jpg" class="img-fluid thumbnail p-1" alt="Wizualizacja domu jednorodzinnego" loading="lazy">
+        </div>
+        <div class="col-lg-6 col-12 m-auto py-2 text-left">
+        <div class="py-auto">
+          <p class="leadUl">
+            <ul class="leadUl" style="padding-left: 40px;">
+            	<li>konfiguracja VPS, instalacja Linux, Node.js i Nginx (reverse proxy), przekierowanie domeny z SSL,</li>
+            	<li>napisanie back-endu z pakietami npm (express, ejs, mongoose, itd.),</li>
+            	<li>stworzenie responsywnego front-endu zgodnego z SEO,</li>
+            	<li>napisanie kodu w javascript (kalkulatory, mapy, lightboxy, zapisywanie/odczyt cookiesów, gromadzenie leadów, itd.)</li>
+            	<li>implementacja Analytics i konwersji online, panel do śledzenia konwersji offline (po gclid/cid oraz Google Measurement Protocol),</li>
+            	<li>integracja bazy danych Mongodb lub mySQL (autentykacja użytkowników, dynamiczny content, itd.).</li>
+            	<li>uruchomienie PWA (możliwość "zinstalowania" strony na smartfonie jak aplikacji).</li>
+            </ul>
+         </p>
+        </div>
+      </div> 
+ </div>
+  </div>
+</div>
+</section>
+
+<%- include('partials/footer'); -%>
